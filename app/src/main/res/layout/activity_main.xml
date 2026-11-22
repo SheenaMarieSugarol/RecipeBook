@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#FFF8F0">
+
+    <!-- APP TITLE -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Recipe Management"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="#5D4037"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"/>
+
+    <!-- RECIPE TITLE INPUT -->
+    <EditText
+        android:id="@+id/etRecipeTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter recipe title"
+        android:inputType="textCapSentences"
+        android:singleLine="true"
+        android:padding="12dp"/>
+
+    <!-- RECIPE DESCRIPTION INPUT -->
+    <EditText
+        android:id="@+id/etRecipeDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter recipe description"
+        android:inputType="textMultiLine"
+        android:minLines="2"
+        android:maxLines="4"
+        android:gravity="top"
+        android:padding="12dp"/>
+
+    <!-- ADD RECIPE BUTTONS -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp">
+
+        <Button
+            android:id="@+id/btnAddSweet"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Add Sweet"
+            android:textAllCaps="false"
+            android:layout_marginEnd="6dp"
+            android:backgroundTint="#D47A99"
+            android:textColor="#FFFFFF"/>
+
+        <Button
+            android:id="@+id/btnAddSavory"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Add Savory"
+            android:textAllCaps="false"
+            android:layout_marginStart="6dp"
+            android:backgroundTint="#81A684"
+            android:textColor="#FFFFFF"/>
+
+    </LinearLayout>
+
+    <!-- RECIPE LIST TITLE -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="My Recipes"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#5D4037"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"/>
+
+    <!-- RECYCLERVIEW -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewRecipes"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingBottom="12dp"/>
+
+</LinearLayout>
